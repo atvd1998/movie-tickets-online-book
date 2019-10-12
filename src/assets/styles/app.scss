@@ -17,9 +17,7 @@ $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.outer {
-  background: $mainGrey;
+  //border: 1px solid red;
 }
 body {
   color: $mainBlack;
@@ -56,15 +54,26 @@ h6 {
   font-weight: bold;
   margin-bottom: 1.5em;
 }
+.banner {
+  width: 100%;
+}
 .navbar {
   background: $color1;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  z-index: 1;
 }
 .nav-link {
   color: $color2;
+  &:hover {
+    color: $color3;
+  }
 }
 .nav-right {
-  position: relative;
-  left: 600px;
+  position: absolute;
+  right: 30px;
 }
 .section-title {
   text-align: center;
@@ -87,6 +96,7 @@ h6 {
   box-shadow: $lightShadow;
   transition: $mainTransition;
   .btn-primary {
+    margin: 5px;
     display: inline-block;
     text-decoration: none;
     letter-spacing: $mainSpacing;
@@ -108,6 +118,8 @@ h6 {
   }
 }
 .movie-link {
+  text-align: center;
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -116,8 +128,11 @@ h6 {
 }
 .img-container {
   position: relative;
+  width: 23em;
+  height: 30em;
   img {
-    width: 100%;
+    width: 23em;
+    height: 30em;
     display: block;
     transition: $mainTransition;
   }
@@ -134,6 +149,7 @@ h6 {
     }
   }
 }
+
 .age-top {
   position: absolute;
   top: 0;
@@ -150,18 +166,53 @@ h6 {
   margin-bottom: 0;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: $mainSpacing;
+  letter-spacing: 1;
 }
 .movie-info {
+  width: 23em;
   color: white;
   background: $color1;
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
-  letter-spacing: $mainSpacing;
+  letter-spacing: 1;
+}
+.sigle-movie {
+  .img-container-single {
+    width: 30%;
+    float: left;
+    img {
+      margin: 0 3em;
+      width: 100%;
+    }
+    button {
+      position: relative;
+      margin: 0 3em;
+      width: 100%;
+    }
+  }
+  .movie-info-single {
+    width: 60%;
+    float: right;
+  }
+  h6 {
+    font-weight: 500;
+  }
+}
+.grid-container {
+  margin: 0 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 3rem;
+  grid-column-gap: 20px;
+  img {
+    width: 50%;
+    display: block;
+  }
 }
 .footer {
+  width: 100%;
   margin-top: 100px;
   background: $color1;
   color: white;

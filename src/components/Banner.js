@@ -9,6 +9,6 @@ export default class Banner extends Component {
     };
   }
   render() {
-    return <img src={this.state.banner} alt="this is banner" />;
+    return <img className="banner" src={this.state.banner} alt="this is banner" />;
   }
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import Container from '../../components/Container';
+import Title from '../../components/Title';
 import Textfields from '../../components/Textfields';
 
 export default function Signup() {
   return (
-    <Container>
+    <>
+      <Title title="Đăng ký" />
       <Textfields />
-    </Container>
+    </>
   );
 }

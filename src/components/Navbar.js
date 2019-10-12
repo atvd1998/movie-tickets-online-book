@@ -32,18 +32,9 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
-      <form className="form-inline nav-right" action="/action_page.php">
-        <input
-          className="form-control mr-sm-2"
-          type="text"
-          placeholder="Search"
-        />
-        <button className="btn btn-primary" type="submit">
-          Search
-        </button>
-      </form>
+      
 
-      <ul className="nav-bar nav nav-right">
+      <ul className="nav nav-right">
         <li className="nav-item">
           <Link className="nav-link" to="/">
             Đăng nhập

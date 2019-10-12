@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-.outer {
-  background: #ececec;
-}
-
 body {
   color: #222;
   background: #fff;
@@ -51,17 +47,30 @@ h6 {
   margin-bottom: 1.5em;
 }
 
+.banner {
+  width: 100%;
+}
+
 .navbar {
   background: #50514f;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  z-index: 1;
 }
 
 .nav-link {
   color: #ffe066;
 }
 
+.nav-link:hover {
+  color: #f25f5c;
+}
+
 .nav-right {
-  position: relative;
-  left: 600px;
+  position: absolute;
+  right: 30px;
 }
 
 .section-title {
@@ -92,6 +101,7 @@ h6 {
 }
 
 .movie .btn-primary {
+  margin: 5px;
   display: inline-block;
   text-decoration: none;
   letter-spacing: 3px;
@@ -117,6 +127,8 @@ h6 {
 }
 
 .movie-link {
+  text-align: center;
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -128,10 +140,13 @@ h6 {
 
 .img-container {
   position: relative;
+  width: 23em;
+  height: 30em;
 }
 
 .img-container img {
-  width: 100%;
+  width: 23em;
+  height: 30em;
   display: block;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -172,20 +187,62 @@ h6 {
   margin-bottom: 0;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 1;
 }
 
 .movie-info {
+  width: 23em;
   color: white;
   background: #50514f;
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 1;
+}
+
+.sigle-movie .img-container-single {
+  width: 30%;
+  float: left;
+}
+
+.sigle-movie .img-container-single img {
+  margin: 0 3em;
+  width: 100%;
+}
+
+.sigle-movie .img-container-single button {
+  position: relative;
+  margin: 0 3em;
+  width: 100%;
+}
+
+.sigle-movie .movie-info-single {
+  width: 60%;
+  float: right;
+}
+
+.sigle-movie h6 {
+  font-weight: 500;
+}
+
+.grid-container {
+  margin: 0 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 3rem;
+  grid-column-gap: 20px;
+}
+
+.grid-container img {
+  width: 50%;
+  display: block;
 }
 
 .footer {
+  width: 100%;
   margin-top: 100px;
   background: #50514f;
   color: white;
