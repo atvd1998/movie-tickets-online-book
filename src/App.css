@@ -48,29 +48,60 @@ h6 {
 }
 
 .banner {
+  height: 70vh;
   width: 100%;
 }
 
-.navbar {
-  background: #50514f;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
+.navbar-css {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  padding: 0.75rem 2rem;
+  background: #50514f;
   z-index: 1;
 }
 
-.nav-link {
+.nav-header-css {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-link-css {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  list-style-type: none;
+}
+
+.nav-link-css img {
+  height: 7vh;
+}
+
+.nav-link-css a {
+  height: auto;
+  display: block;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 1rem 0;
   color: #ffe066;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.nav-link:hover {
-  color: #f25f5c;
-}
-
-.nav-right {
-  position: absolute;
-  right: 30px;
+.nav-link-css a:hover {
+  color: #ececec;
+  text-decoration: none;
 }
 
 .section-title {
@@ -128,7 +159,7 @@ h6 {
 
 .movie-link {
   text-align: center;
-  width: 50%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -226,19 +257,72 @@ h6 {
   font-weight: 500;
 }
 
-.grid-container {
+.grid-container-movie {
   margin: 0 3em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(350px, 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 20px;
 }
 
-.grid-container img {
+.grid-container-movie img {
   width: 50%;
   display: block;
+}
+
+.screen {
+  text-align: center;
+}
+
+.grid-container-seat {
+  margin: 0 auto;
+  width: 30%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (30px)[10];
+      grid-template-columns: repeat(10, 30px);
+}
+
+.grid-container-seat .grid-item {
+  margin: 5px 30px;
+}
+
+.grid-container-seat button:hover {
+  background: #ececec;
+}
+
+.error {
+  color: red;
+}
+
+.container-time {
+  border-bottom: 2px solid black;
+}
+
+.container-time button {
+  margin: 10px 5px;
+}
+
+.container-seat {
+  border-bottom: 2px solid black;
+}
+
+.container-seat button {
+  margin: 10px 5px;
+}
+
+.container-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-button h4 {
+  margin: auto;
+  padding-left: 5px;
 }
 
 .footer {

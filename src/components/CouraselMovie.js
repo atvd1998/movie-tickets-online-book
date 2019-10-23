@@ -12,20 +12,28 @@ export default class CouraselMovie extends Component {
     super(props);
     this.state = [
       {
+        id: 1,
+        name: 'joker',
         img: img1,
         info: 'Joker'
       },
       {
+        id: 2,
+        name: 'bietdoi',
         img: img2,
-        info: 'Biet doi'
+        info: 'Biệt đội'
       },
       {
+        id: 3,
+        name: 'danongsongtu',
         img: img3,
-        info: 'dan ong song tu'
+        info: 'Đàn ông song tử'
       },
       {
+        id: 4,
+        name: 'thatson',
         img: img4,
-        info: 'that son tam linh'
+        info: 'Thất sơn tâm linh'
       }
     ];
   }
@@ -35,7 +43,14 @@ export default class CouraselMovie extends Component {
         <Title title="Phim đang chiếu" />
         <Courasel>
           {this.state.map(movie => {
-            return <Movie img={movie.img} info={movie.info} />;
+            return (
+              <Movie
+                img={movie.img}
+                name={movie.name}
+                info={movie.info}
+                key={movie.id}
+              />
+            );
           })}
         </Courasel>
       </>
