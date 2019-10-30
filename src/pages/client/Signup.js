@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useForm from '../../components/useForm';
+import useForm from '../../components/Signup/useForm';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,7 +12,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import validate from '../../components/validateLogin';
+import validate from '../../components/Signup/validateLogin';
+import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -39,7 +40,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SignUp() {
+export default function SignUp(props) {
   const { handleChange, handleSubmit, values, errors } = useForm(
     submit,
     validate
@@ -47,7 +48,8 @@ export default function SignUp() {
   const classes = useStyles();
 
   function submit() {
-    console.log('Submit successfully');
+    axios.post('http://localhost:5000/users/add', values)
+      .then(res => alert(res.data));
   }
 
   return (
@@ -62,7 +64,12 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          <form
+            method="/GET"
+            onSubmit={handleSubmit}
+            className={classes.form}
+            noValidate
+          >
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField

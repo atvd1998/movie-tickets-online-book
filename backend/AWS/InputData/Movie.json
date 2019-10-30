@@ -1,0 +1,123 @@
+[
+    {
+        "movieID": "joker",
+        "movieName": "Joker",
+        "director": "Todd Phillips",
+        "casters": [
+            "Robert De Niro",
+            "Joaquin Phoenix",
+            "Zazie Beetz"
+        ],
+        "durable": 120,
+        "style": [
+            "Hồi hộp",
+            "Tâm lý",
+            "Tội phạm"
+        ],
+        "ages": 18,
+        "state": "available",
+        "img": "assets/images/joker.jpg",
+        "detail": "Joker từ lâu đã là siêu ác nhân huyền thoại của điện ảnh thế giới. Nhưng có bao giờ bạn tự hỏi, Joker đến từ đâu và điều gì đã biến Joker trở thành biểu tượng tội lỗi của thành phố Gotham? JOKER sẽ là cái nhìn độc đáo về tên ác nhân khét tiếng của Vũ trụ DC – một câu chuyện gốc thấm nhuần, nhưng tách biệt rõ ràng với những truyền thuyết quen thuộc xoay quanh nhân vật mang đầy tính biểu tượng này. Bộ phim đã xuất sắc giành giải thưởng Sư Tử Vàng- Phim Hay Nhất tại LHP Venice lần thứ 76, cùng tràng pháo tay dài 8 phút, và lời khen ngợi dành cho diễn xuất của tài tử Joaquin Phoenix. Một bộ phim không thể bỏ lỡ của tháng 10 năm nay."
+    },
+    {
+        "movieID": "danongsongtu",
+        "movieName": "Đàn ông song tử",
+        "director": "Ang Lee",
+        "casters": [
+            "Will Smith",
+            "Mary Elizabeth Winstead",
+            "Clive Owen",
+            "Douglas Hodge",
+            "Benedict Wong"
+        ],
+        "durable": 122,
+        "style": [
+            "Hành động"
+        ],
+        "ages": 16,
+        "state": "available",
+        "img": "assets/images/danongsongtu.jpg",
+        "detail": "Gemini Man là một phim hành động mới lạ với sự tham gia của Will Smith trong vai Henry Brogan, một sát thủ ưu tú, người phải đối mặt với kẻ thù tối thượng của mình - một bản sao trẻ hơn của chính mình. Bản sao có tất cả các kỹ năng mà Henry đã trau chuốt trong suốt cuộc đời mình, và dường như có thể dự đoán mọi hành động của anh ta, thiết lập một cuộc đối đầu chết chóc giữa hai sát thủ hàng đầu."
+    },
+    {
+        "movieID": "thatsontamlinh",
+        "movieName": "Thất Sơn Tâm Linh",
+        "director": "Lê Bình Giang",
+        "casters": [
+            "Hoàng Yến Chibi",
+            "Quang Tuấn",
+            "Đinh Y Nhung",
+            "Thanh Tú",
+            "Lâm Thanh Mỹ"
+        ],
+        "durable": 103,
+        "style": [
+            "Kinh dị"
+        ],
+        "ages": 18,
+        "state": "available",
+        "img": "assets/images/thatsontamlinh.jpg",
+        "detail": "Thất Sơn Tâm Linh là câu chuyện kể về gã thầy thuốc sát nhân tên Huỳnh. Với tướng mạo hiền từ, cách nói chuyện nhẹ nhàng, từ tốn, thường xuyên chữa bệnh mà không lấy tiền, hắn tạo được lòng tin của rất nhiều người dân ở nơi hắn đến. Hắn ta luôn gieo rắc vào đầu người khác về những bài thuốc bí truyền, những cách chữa bệnh kỳ lạ mang đậm màu sắc kì dị…Nhưng đằng sau đó là một âm mưu khủng khiếp!"
+    },
+    {
+        "movieID": "bietdoi",
+        "movieName": "Biệt đội bất hảo",
+        "director": "Son Young-ho",
+        "casters": [
+            "Ma Dong-seok",
+            "Kim Sang-joong",
+            "Kim A-joong",
+            "Jang Ki-yong"
+        ],
+        "durable": 117,
+        "style": [
+            "Hành động",
+            "Tội phạm"
+        ],
+        "ages": 18,
+        "state": "available",
+        "img": "assets/images/bietdoi.jpg",
+        "detail": "Đội Điều Tra Đặc Biệt bao gồm Đội trưởng Oh Gu-tak (KIM Sang-joong), thành viên gạo cội - tay đấm Park Woong-chul (Ma Dong-seok), hai thành viên được chiêu mộ thêm là thiên tài lừa đảo Kwak No-soon (KIM A-joong), và tay cảnh sát lì lợm đang lĩnh án Ko Yoo-sung (JANG Ki-yong). Được giao nhiệm vụ bắt lại những tên tội phạm trốn thoát trên đường chuyển tù, nhưng dần dần cả đội nhận ra nhiều âm mưu khủng khiếp còn ẩn giấu. Và Biệt Đội Bất Hảo quyết định ra tay lùng bắt tay trùm xấu xa đứng sau mọi chuyện..."
+    },
+    {
+        "movieID": "backimthang",
+        "movieName": "Bắc kim thang",
+        "director": "Trần Hữu Tấn",
+        "casters": [
+            "Trịnh Tài",
+            "Duy Phương",
+            "Bích Hằng",
+            "Hữu Tiến",
+            "Minh Hy"
+        ],
+        "durable": 120,
+        "style": [
+            "Hồi hộp"
+        ],
+        "ages": 18,
+        "state": "available",
+        "img": "assets/images/backimthang.jpg",
+        "detail": "Bắc Kim Thang ​được xây dựng để phản ánh quan niệm “trọng nam khinh nữ”, một quan niệm đã và đang tồn tại trong nhận thức của người Á Đông, đặc biệt vẫn còn hiện hữu đâu đó tại những miền thôn quê Việt Nam."
+    },
+    {
+        "movieID": "maleficent",
+        "movieName": "Maleficent",
+        "director": "Joachim Rønning",
+        "casters": [
+            "Angelina Jolie",
+            "Elle Fanning",
+            "Michelle Pfeiffer",
+            "Ed Skrein",
+            "Chiwetel Ejiofor"
+        ],
+        "durable": 125,
+        "style": [
+            "Phiêu lưu",
+            "Thần thoại"
+        ],
+        "ages": 13,
+        "state": "available",
+        "img": "assets/images/maleficent.jpg",
+        "detail": "Thời gian trôi qua thật bình yên với Maleficent và Aurora. Mặc dù mối quan hệ của cả hai được tạo dựng từ những tổn thương, thù hận rồi sau đó mới đến tình yêu thương nhưng cuối cùng thì nó cũng đã đơm hoa kết trái. Tuy vậy, xung đột giữa hai giới: loài người và tiên tộc vẫn vẫn luôn hiện hữu. Cuộc hôn nhân vốn bị trì hoãn giữa Aurora và Hoàng tử Phillips chính là cầu nối gắn kết Vương quốc Ulstead và nước láng giềng Moors lại với nhau. Bất ngờ thay, sự xuất hiện của một phe đồng minh hoàn toàn mới sẽ khiến Maleficent và Aurora bị chia cắt về hai chiến tuyến trong trận Đại Chiến. Trận chiến này sẽ thử thách lòng tin lẫn tình cảm của cả hai. Liệu rằng họ có thật sự trở thành một gia đình hay không? Tất cả sẽ được giải đáp trong Maleficent: Mistress of Evil/ Tiên Hắc Ám 2."
+    }
+]

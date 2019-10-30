@@ -1,0 +1,144 @@
+[
+    {
+        "movieID": "joker",
+        "scheduleID": "sche001",
+        "month": 11,
+        "date": 1,
+        "day": "FRI",
+        "hour": "12:00",
+        "ticketDetail": [
+            {
+                "ticketDetailID": "detail001",
+                "seatID": "A1"
+            },
+            {
+                "ticketDetailID": "detail002",
+                "seatID": "A2"
+            },
+            {
+                "ticketDetailID": "detail003",
+                "seatID": "B6"
+            },
+            {
+                "ticketDetailID": "detail004",
+                "seatID": "C3"
+            }
+        ],
+        "roomID": "R01"
+    },
+    {
+        "movieID": "joker",
+        "scheduleID": "sche002",
+        "month": 11,
+        "date": 2,
+        "day": "SAT",
+        "hour": "16:00",
+        "ticketDetail": [
+            {
+                "ticketDetailID": "detail005",
+                "seatID": "A1"
+            },
+            {
+                "ticketDetailID": "detail006",
+                "seatID": "B2"
+            },
+            {
+                "ticketDetailID": "detail007",
+                "seatID": "C3"
+            },
+            {
+                "ticketDetailID": "detail008",
+                "seatID": "D4"
+            },
+            {
+                "ticketDetailID": "detail009",
+                "seatID": "E5"
+            }
+        ],
+        "roomID": "R02"
+    },
+    {
+        "movieID": "danongsongtu",
+        "scheduleID": "sche003",
+        "month": 11,
+        "date": 1,
+        "day": "FRI",
+        "hour": "16:00",
+        "ticketDetail": [
+            {
+                "ticketDetailID": "detail010",
+                "seatID": "D0"
+            },
+            {
+                "ticketDetailID": "detail011",
+                "seatID": "D1"
+            },
+            {
+                "ticketDetailID": "detail012",
+                "seatID": "D2"
+            },
+            {
+                "ticketDetailID": "detail013",
+                "seatID": "D3"
+            },
+            {
+                "ticketDetailID": "detail014",
+                "seatID": "D4"
+            },
+            {
+                "ticketDetailID": "detail015",
+                "seatID": "D5"
+            },
+            {
+                "ticketDetailID": "detail016",
+                "seatID": "D6"
+            },
+            {
+                "ticketDetailID": "detail017",
+                "seatID": "D7"
+            },
+            {
+                "ticketDetailID": "detail018",
+                "seatID": "D8"
+            },
+            {
+                "ticketDetailID": "detail019",
+                "seatID": "D9"
+            }
+        ],
+        "roomID": "R03"
+    },
+    {
+        "movieID": "thatsontamlinh",
+        "scheduleID": "sche004",
+        "month": 11,
+        "date": 1,
+        "day": "FRI",
+        "hour": "16:00",
+        "ticketDetail": [],
+        "roomID": "R04"
+    },
+    {
+        "movieID": "bietdoi",
+        "scheduleID": "sche005",
+        "month": 11,
+        "date": 1,
+        "day": "FRI",
+        "hour": "14:00",
+        "ticketDetail": [
+            {
+                "ticketDetailID": "detail020",
+                "seatID": "A6"
+            },
+            {
+                "ticketDetailID": "detail021",
+                "seatID": "D6"
+            },
+            {
+                "ticketDetailID": "detail022",
+                "seatID": "E9"
+            }
+        ],
+        "roomID": "R02"
+    }
+]

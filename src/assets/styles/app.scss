@@ -201,23 +201,42 @@ h6 {
   font-weight: 700;
   letter-spacing: 1;
 }
+//Single-movie component
 .sigle-movie {
+  display: flex;
+  justify-content: flex-start;
   .img-container-single {
-    width: 30%;
-    float: left;
+    margin: 30px;
     img {
       margin: 0 3em;
       width: 100%;
     }
-    button {
+    .btn-primary {
+      text-align: center;
       position: relative;
       margin: 0 3em;
       width: 100%;
+      display: inline-block;
+      text-decoration: none;
+      letter-spacing: $mainSpacing;
+      color: $mainBlack;
+      font-weight: 700;
+      background: $color2;
+      padding: 0.4rem 0.9rem;
+      border: 3px solid $color2;
+      transition: $mainTransition;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        background: transparent;
+        color: $color2;
+        border-color: $color2;
+      }
     }
   }
   .movie-info-single {
-    width: 60%;
-    float: right;
+    margin: 30px;
+    width: 50%;
   }
   h6 {
     font-weight: 500;
@@ -226,16 +245,31 @@ h6 {
 .grid-container-movie {
   margin: 0 3em;
   display: grid;
-  grid-template-columns: repeat(4, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
   grid-row-gap: 3rem;
-  grid-column-gap: 20px;
-  img {
-    width: 50%;
-    display: block;
-  }
+  grid-column-gap: 50px;
 }
 .screen {
   text-align: center;
+  .btn-primary {
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: $mainSpacing;
+    color: $mainBlack;
+    font-weight: 700;
+    background: $color2;
+    padding: 0.4rem 0.9rem;
+    border: 3px solid $color2;
+    transition: $mainTransition;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      background: transparent;
+      color: $color2;
+      border-color: $color2;
+    }
+  }
 }
 
 .grid-container-seat {
@@ -245,43 +279,154 @@ h6 {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(10, 30px);
+  //thay doi mau
   .grid-item {
     margin: 5px 30px;
+    background: inherit;
   }
+
   button {
     &:hover {
       background: $mainGrey;
     }
+    &:disabled {
+      background: $color3;
+    }
   }
+}
+.clicked {
+  background: $color4;
+}
+.not-clicked {
+  background: inherit;
 }
 //signup form
 .error {
   color: red;
 }
 //schedule
-.container-time {
-  border-bottom: 2px solid black;
-  button {
-    margin: 10px 5px;
-  }
-}
+
 .container-seat {
-  border-bottom: 2px solid black;
-  button{
-    margin: 10px 5px;
-  }
+  margin: auto;
+  padding: 10px;
+}
+.container-day {
+  margin: auto;
 }
 .container-button {
   display: flex;
+  border: 2px solid black;
+
   h4 {
     margin: auto;
     padding-left: 5px;
   }
+  h2 {
+    margin: auto;
+  }
 }
+.container-schedule {
+  display: flex;
+  a {
+    text-decoration: none;
+  }
+}
+//Seatchart
+
 .footer {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   margin-top: 100px;
   background: $color1;
   color: white;
-  height: 300px;
+  height: 200px;
+}
+
+//admin
+//MovieManage
+.table-movie {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  a {
+    text-decoration: none;
+    padding: 2px;
+  }
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background: lightblue;
+    color: white;
+  }
+  td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  tr {
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+.container-moviemanage {
+  a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+  }
+}
+.btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80px;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: $color4;
+  &:hover {
+    background-color: lightgrey;
+  }
+}
+
+.container-movies-page {
+  display: flex;
+  justify-content: space-between;
+  .btn-primary {
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: $mainSpacing;
+    color: $mainBlack;
+    font-weight: 700;
+    background: $color3;
+    padding: 0.4rem 0.9rem;
+    border: 3px solid $color3;
+    transition: $mainTransition;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      background: transparent;
+      color: $color3;
+      border-color: $color3;
+    }
+  }
+  label {
+    margin-right: 20px;
+  }
+  input {
+    margin-right: 50px;
+    font-size: 20px;
+  }
+}
+.offercourasel {
+  img {
+    width: 500px;
+    height: 500px;
+  }
 }

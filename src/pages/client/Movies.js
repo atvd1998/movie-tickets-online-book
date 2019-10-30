@@ -1,57 +1,116 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import Navbar from '../../components/Navbar';
 import Banner from '../../components/Banner';
 import Title from '../../components/Title';
 import Movie from '../../components/Movie';
 import Footer from '../../components/Footer';
-import img1 from '../../assets/images/joker.jpg';
-import img2 from '../../assets/images/nguoituyet.jpg';
-import img3 from '../../assets/images/danongsongtu.jpg';
-import img4 from '../../assets/images/bietdoi.jpg';
-import img5 from '../../assets/images/thatsontamlinh.jpg';
-export default function Movies() {
-  const [state, setState] = useState({
-    value: 1
-  });
-  const [movie, setMovie] = useState({
-    imgs: [
-      { id: 1, img: img1, state: 1 },
-      { id: 2, img: img2, state: 1 },
-      { id: 3, img: img3, state: 1 },
-      { id: 4, img: img4, state: 0 },
-      { id: 5, img: img5, state: 0 }
-    ]
-  });
+import axios from 'axios';
+export default class Movies extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isAvai: 1,
+      movies: [],
+      searchMovies: []
+    };
+  }
+  componentDidMount() {
+    axios
+      .get('http://localhost:5000/movies/')
+      .then(response => {
+        this.setState({ movies: response.data.Items });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 
-  return (
-    <>
-      <Navbar />
-      <Banner />
-      <div>
-        <button onClick={() => setState({ value: 1 })}>Phim đang chiếu</button>
-        <button onClick={() => setState({ value: 0 })}>Phim sắp chiếu</button>
-      </div>
-      <Title title={state.value === 1 ? 'Phim đang chiếu' : 'Phim sắp chiếu'} />
-      <div className="grid-container-movie">
-        {state.value === 1
-          ? movie.imgs
-              .filter(movie => {
-                return movie.state === 1;
-              })
-              .map(movie => {
-                return <img src={movie.img} key={movie.id} alt="avaimovie" />;
-              })
-          : movie.imgs
-              .filter(movie => {
-                return movie.state === 0;
-              })
-              .map(movie => {
+  handleChange = event => {
+    this.setState({
+      searchMovies: this.state.movies.filter(movie => {
+        return movie.movieName === event.target.value;
+      })
+    });
+    console.log(this.state.searchMovies);
+  };
+
+  render() {
+    console.log(this.state.movies);
+    return (
+      <>
+        <Navbar />
+        <Banner />
+        <div className="container-movies-page">
+          <div>
+            <button
+              className="btn-primary"
+              onClick={() => this.setState({ isAvai: 1 })}
+            >
+              Phim đang chiếu
+            </button>
+            <button
+              className="btn-primary"
+              onClick={() => this.setState({ isAvai: 0 })}
+            >
+              Phim sắp chiếu
+            </button>
+          </div>
+          <form>
+            <label>Tìm kiếm</label>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              name="search"
+              id="search"
+            />
+          </form>
+        </div>
+        <Title
+          title={this.state.isAvai === 1 ? 'Phim đang chiếu' : 'Phim sắp chiếu'}
+        />
+        <div className="grid-container-movie">
+          {this.state.searchMovies.length > 0
+            ? this.state.searchMovies.map(movie => {
+                let image = require('../../' + movie.img);
                 return (
-                  <img src={movie.img} key={movie.id} alt="notavaimovie" />
+                  <Movie
+                    className="single-movie"
+                    img={image}
+                    name={movie.movieID}
+                    info={movie.movieName}
+                    age={movie.ages}
+                    key={movie.movieID}
+                  />
                 );
-              })}
-      </div>
-      <Footer />
-    </>
-  );
+              })
+            : this.state.isAvai === 1
+            ? this.state.movies
+                .filter(movie => {
+                  return movie.state === 'available';
+                })
+                .map(movie => {
+                  let image = require('../../' + movie.img);
+                  return (
+                    <Movie
+                      className="single-movie"
+                      img={image}
+                      name={movie.movieID}
+                      info={movie.movieName}
+                      age={movie.ages}
+                      key={movie.movieID}
+                    />
+                  );
+                })
+            : this.state.movies
+                .filter(movie => {
+                  return movie.state === 'notavailable';
+                })
+                .map(movie => {
+                  return <p>{movie.movieName}</p>;
+                })}
+        </div>
+        <Footer />
+      </>
+    );
+  }
 }

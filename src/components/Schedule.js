@@ -1,37 +1,25 @@
 import React from 'react';
 
-export default function Schedule() {
+
+export default function Schedule({ id, date, day, month, hour, chair }) {
+  const handleClick = e => {
+    window.location.href = "localhost://3000"
+  };
   return (
     <>
       <div className="container-time">
-        <button>
+        <button onClick={handleClick}>
           <div className="container-button">
-            <div>
-              <h6>10</h6>
-              <h6>WED</h6>
+            <div className="container-day">
+              <h6>{date}</h6>
+              <h6>{day}</h6>
             </div>
-            <h4>27</h4>
-          </div>
-        </button>
-        <button>
-          <div className="container-button">
-            <div>
-              <h6>10</h6>
-              <h6>WED</h6>
+            <h2>{month}</h2>
+            <div className="container-seat">
+              <h4>{hour}</h4>
+              <h6>{`${chair} ghế trống`}</h6>
             </div>
-            <h4>27</h4>
           </div>
-        </button>
-      </div>
-
-      <div className="container-seat">
-        <button>
-          <h4>20:00</h4>
-          <h6>120 ghế trống</h6>
-        </button>
-        <button>
-          <h4>21:00</h4>
-          <h6>120 ghế trống</h6>
         </button>
       </div>
     </>
