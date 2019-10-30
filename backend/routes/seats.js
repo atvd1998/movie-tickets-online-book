@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const aws = require('aws-sdk');
 aws.config.update({
-  region: 'local',
+  region: 'us-east-1',
   endpoint: 'http://localhost:8000'
 });
 let docClient = new aws.DynamoDB.DocumentClient();
