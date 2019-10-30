@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function Courasel({children}) {
+export default function Courasel({ children }) {
   return (
     <Carousel
       additionalTransfrom={0}
@@ -51,7 +51,7 @@ export default function Courasel({children}) {
       slidesToSlide={1}
       swipeable
     >
-    {children}
+      {children}
     </Carousel>
   );
 }

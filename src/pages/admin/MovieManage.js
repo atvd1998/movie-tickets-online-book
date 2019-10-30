@@ -14,7 +14,7 @@ export default class MovieManage extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://localhost:5000/movies/')
+      .get('http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/movies/')
       .then(response => {
         this.setState({ movies: response.data.Items });
       })
@@ -65,7 +65,7 @@ export default class MovieManage extends Component {
                       onClick={() => {
                         axios
                           .delete(
-                            'http://localhost:5000/movies/' + movie.movieID
+                            'http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/movies/' + movie.movieID
                           )
                           .then(response => {
                             alert(response.data);
