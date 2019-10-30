@@ -2,7 +2,7 @@ const router = require('express').Router();
 const aws = require('aws-sdk');
 aws.config.update({
   region: 'us-east-1',
-  endpoint: 'http://localhost:8000'
+  endpoint: 'https://dynamodb.us-east-1.amazonaws.com'
 });
 let docClient = new aws.DynamoDB.DocumentClient();
 router.route('/').get((req, res) => {

@@ -2,19 +2,15 @@ var AWS = require('aws-sdk');
 
 AWS.config.update({
   region: 'us-east-1',
-  endpoint: 'http://localhost:8000'
+  endpoint: 'https://dynamodb.us-east-1.amazonaws.com'
 });
 
 var dynamodb = new AWS.DynamoDB();
 
 var params = {
   TableName: 'Movies',
-  KeySchema: [
-    { AttributeName: 'movieID', KeyType: 'HASH' }
-  ],
-  AttributeDefinitions: [
-    { AttributeName: 'movieID', AttributeType: 'S' }
-  ],
+  KeySchema: [{ AttributeName: 'movieID', KeyType: 'HASH' }],
+  AttributeDefinitions: [{ AttributeName: 'movieID', AttributeType: 'S' }],
   ProvisionedThroughput: {
     ReadCapacityUnits: 10,
     WriteCapacityUnits: 10
