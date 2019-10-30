@@ -50,7 +50,7 @@ export default function SignIn(props) {
   const classes = useStyles();
   function submit() {
     axios
-      .get('http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/users/' + values.email)
+      .get('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/users/' + values.email)
       .then(response => {
         console.log(response.data.Items[0]);
         if (response.data.Items[0] === undefined) {

@@ -16,7 +16,7 @@ export default class SingleMovie extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/movies/' + this.state.id)
+      .get('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/movies/' + this.state.id)
       .then(response => {
         this.setState({ movie: response.data.Items[0] });
       })

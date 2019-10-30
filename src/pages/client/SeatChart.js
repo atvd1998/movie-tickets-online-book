@@ -27,7 +27,7 @@ export default class SeatChart extends Component {
   componentDidMount() {
     axios
       .get(
-        'http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/schedules/' +
+        'http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/schedules/' +
           this.state.movieID +
           '/' +
           this.state.scheduleID
@@ -44,7 +44,7 @@ export default class SeatChart extends Component {
       });
 
     axios
-      .get('http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/seats/' + this.state.roomID)
+      .get('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/seats/' + this.state.roomID)
       .then(response => {
         this.setState({ tongGhe: response.data.Items });
       })
@@ -89,7 +89,7 @@ export default class SeatChart extends Component {
       this.state.gheChon.forEach(ghe => {
         axios
           .get(
-            'http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/schedules/add/' +
+            'http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/schedules/add/' +
               this.state.movieID +
               '/' +
               this.state.scheduleID,

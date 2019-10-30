@@ -13,7 +13,7 @@ export default class CouraselMovie extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/movies/')
+      .get('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/movies/')
       .then(response => {
         this.setState({ movies: response.data.Items });
       })

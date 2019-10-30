@@ -43,7 +43,7 @@ export default function SignUp(props) {
   const classes = useStyles();
 
   function submit() {
-    axios.post('http://ec2-54-167-217-242.compute-1.amazonaws.com:5000/schedules/add', values).then(res => {
+    axios.post('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/schedules/add', values).then(res => {
       alert(res.data);
       props.history.push('/moviemanage');
     });
