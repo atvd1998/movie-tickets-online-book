@@ -9,7 +9,8 @@ export default class MovieManage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      movies: [],
+      schedules: []
     };
   }
   componentDidMount() {
@@ -22,6 +23,20 @@ export default class MovieManage extends Component {
         console.log(error);
       });
   }
+  getSchedule = async movieID => {
+    let res = await axios.get('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/schedules/' + movieID);
+    let [...data] = res.data.Items;
+    this.setState({ schedules: data });
+    if (this.state.schedules.length === 0) {
+      axios
+        .delete('http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/movies/' + movieID)
+        .then(response => {
+          alert(response.data);
+        });
+    } else {
+      alert('Không thể xóa phim có lịch chiếu');
+    }
+  };
   render() {
     const { signout } = this.context;
     console.log(this.state.movies);
@@ -63,13 +78,7 @@ export default class MovieManage extends Component {
                   <td>
                     <Link
                       onClick={() => {
-                        axios
-                          .delete(
-                            'http://ec2-18-232-97-190.compute-1.amazonaws.com:5000/movies/' + movie.movieID
-                          )
-                          .then(response => {
-                            alert(response.data);
-                          });
+                        this.getSchedule(movie.movieID);
                       }}
                     >
                       Delete
